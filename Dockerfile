@@ -1,4 +1,4 @@
-FROM cern/cc7-base
+FROM cern/slc6-base
 
 MAINTAINER Valerio Formato valerio.formato@cern.ch
 
@@ -50,8 +50,8 @@ RUN adduser $AMS_USER -d $AMS_USER_HOME && echo "$AMS_USER:ams" | chpasswd && \
     chmod 0440 /etc/sudoers.d/$AMS_USER
 RUN chown -R $AMS_USER $AMS_USER_HOME
 
-ADD setup_amsenv.sh  $AMS_USER_HOME
-RUN chown -R $AMS_USER $AMS_USER_HOME/setup_amsenv.sh
+# ADD setup_amsenv.sh  $AMS_USER_HOME
+# RUN chown -R $AMS_USER $AMS_USER_HOME/setup_amsenv.sh
 
 ADD dot-bashrc  $AMS_USER_HOME/.bashrc
 RUN chown $AMS_USER $AMS_USER_HOME/.bashrc
