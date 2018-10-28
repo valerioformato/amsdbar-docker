@@ -23,7 +23,7 @@ RUN yum -y install \
     man nano emacs openssh-server openssl098e libXext libXpm \
     git gsl-devel freetype-devel libSM libX11-devel libXext-devel make gcc-c++ \
     gcc binutils libXpm-devel libXft-devel boost-devel \
-    cmake ncurses ncurses-devel xrootd; \
+    cmake ncurses ncurses-devel xrootd blas; \
     yum clean all
 RUN yum install -y cvs openssh-clients
 
