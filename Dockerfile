@@ -55,7 +55,7 @@ RUN chown -R $AMS_USER $AMS_USER_HOME
 
 ADD dot-bashrc  $AMS_USER_HOME/.bashrc
 RUN chown $AMS_USER $AMS_USER_HOME/.bashrc
-RUN chmod u+x $AMS_USER_HOME/setup_amsenv.sh
+# RUN chmod u+x $AMS_USER_HOME/setup_amsenv.sh
 
 USER $AMS_USER
 WORKDIR $AMS_USER_HOME
