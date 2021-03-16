@@ -18,7 +18,7 @@ ADD etc-yum-cernvm.repo /etc/yum.repos.d/cernvm.repo
 #--- Install rpms
 RUN yum update -y; yum clean all
 RUN yum -y install \
-    cvmfs cvmfs-init-scripts cvmfs-auto-setup \
+    cvmfs cvmfs-init-scripts cvmfs-auto-setup doxygen \
     freetype fuse sudo glibc-devel glibc-headers libstdc++-devel \
     man nano emacs openssh-server openssl098e libXext libXpm \
     git gsl-devel freetype-devel libSM libX11-devel libXext-devel make gcc-c++ \
