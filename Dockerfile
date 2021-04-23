@@ -50,8 +50,8 @@ RUN adduser $AMS_USER -d $AMS_USER_HOME && echo "$AMS_USER:ams" | chpasswd && \
 
 RUN chown -R $AMS_USER $AMS_USER_HOME
 
-ADD baseenv.sh  $AMS_USER_HOME
-RUN chown -R $AMS_USER $AMS_USER_HOME/baseenv.sh
+# ADD baseenv.sh  $AMS_USER_HOME
+# RUN chown -R $AMS_USER $AMS_USER_HOME/baseenv.sh
 
 # ADD setup_amsenv.sh  $AMS_USER_HOME
 # RUN chown -R $AMS_USER $AMS_USER_HOME/setup_amsenv.sh
